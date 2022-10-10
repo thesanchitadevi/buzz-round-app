@@ -7,7 +7,7 @@ const Quiz = ({ quiz }) => {
 
     return (
         <div>           
-            <div className="card w-80 bg-gray-200 shadow-xl image-full mx-auto my-10">
+            <div className="card w-80 bg-gray-100 shadow-xl image-full mx-auto my-10">
                 <figure><img src={logo} alt="...." /></figure>
                 <div className="card-body justify-center items-center">
                     <h2 className="text-center text-2xl font-bold">{name}</h2>
