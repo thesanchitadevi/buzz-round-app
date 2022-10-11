@@ -9,7 +9,7 @@ const QuizDetails = () => {
     // console.log(quiz);
     const quizQues = quiz.data;
     const { name, questions } = quizQues;
-    console.log(questions);
+    // console.log(questions);
 
     const rightMessage = () => {
         toast.success('The Answer is Right !', {
@@ -36,9 +36,11 @@ const QuizDetails = () => {
     }
 
     return (
-        <div>
-            <h1>Here quiz ques : { name}</h1>
-            <p>Ques : {questions.length}</p>
+        <div >
+            <div  >
+                <h1 className='text-center text-3xl text-emerald-600 font-bold py-5'>Quiz on {name}</h1>
+                <h2 className='text-center py-3 text-xl bg-emerald-600 text-white my-2 w-1/2 mx-auto rounded-xl'>Your got {rightAnswer.length} out of { questions.length}</h2>
+            </div>
             {
                 questions.map(question => <Questions
                     key={question.id}
