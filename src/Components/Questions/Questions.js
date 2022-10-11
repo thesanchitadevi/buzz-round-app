@@ -4,17 +4,12 @@ import 'react-toastify/dist/ReactToastify.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 
-const Questions = ({ question, handleButton }) => {
+const Questions = ({ question, handleButton,serial }) => {
     const [active, setActive] = useState();
     const handleToViewAns = () => {
         setActive(show => !show)
     }
 
-    const [selected, setSelected] = useState('');
-    const handleChange = event => {
-        console.log(event.target.value);
-        setSelected(event.target.value);
-    };
 
     return (
         <div>
@@ -23,7 +18,7 @@ const Questions = ({ question, handleButton }) => {
                 <div className='bg-slate-100 shadow-lg mx-auto lg:w-1/2 text-xl font-medium m-5 rounded-xl p-6'>
                     <div  className='flex justify-between'>
 
-                        <h1>Quiz  : {question.question.slice(3, -4)} </h1>
+                        <h1>Quiz {serial} : {question.question.slice(3, -4)} </h1>
 
 
                         {/* eye icon for correct answer */}
@@ -36,10 +31,8 @@ const Questions = ({ question, handleButton }) => {
                     {
                         question.options.map(option =>
                             
-                            <div onClick={() => handleButton(option, question.correctAnswer)} className='cursor-pointer border border-emerald-300  hover:text-emerald-600 p-2 my-4 rounded flex justify-left items-center'>
-                                <label className='pr-8'>
-                                    <input value={option} onChange={handleChange}
-                                    type="radio"  /></label>
+                            <div onClick={() => handleButton(option, question.correctAnswer)} className='cursor-pointer border border-emerald-300 text-center  hover:text-emerald-600 p-2 my-4 rounded-xl'>
+                              
                                 {option}
                             </div>)
                     }

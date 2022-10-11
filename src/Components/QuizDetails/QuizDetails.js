@@ -44,9 +44,10 @@ const QuizDetails = () => {
                 <h2 className='text-center py-3 lg:text-xl sm:text-lg bg-emerald-600 text-white my-2 w-1/2 mx-auto rounded-xl'>Your got {rightAnswer.length} out of { questions.length}</h2>
             </div>
             {
-                questions.map(question => <Questions
+                questions.map((question,index) => <Questions
                     key={question.id}
                     question={question}
+                    serial={index + 1}
                     handleButton={handleButton}
                 ></Questions>)
             }
