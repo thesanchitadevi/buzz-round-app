@@ -5,7 +5,7 @@ import Chart from './Components/Chart/Chart';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import FAQ from './Components/FAQ/FAQ';
 import QuizDetails from './Components/QuizDetails/QuizDetails';
-import Quizs from './Components/Quizs/Quizs';
+import Quizzes from './Components/Quizzes/Quizzes';
 import Main from './Layout/Main';
 
 function App() {
@@ -20,14 +20,14 @@ function App() {
           loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
-          element: <Quizs></Quizs>
+          element: <Quizzes></Quizzes>
         },
         {
-          path: '/quizs',
+          path: '/quizzes',
           loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
-          element: <Quizs></Quizs>
+          element: <Quizzes></Quizzes>
         },
         {
           path: '/quiz/:quizId',

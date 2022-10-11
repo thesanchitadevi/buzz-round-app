@@ -6,20 +6,21 @@ import { toast } from 'react-toastify';
 const QuizDetails = () => {
     const quiz = useLoaderData();
     // console.log(quiz);
-
-    const [rightAnswer, setRightAnswer] = useState([]);
     const quizQues = quiz.data;
     const { name, questions } = quizQues;
     // console.log(questions);
 
+    const [rightAnswer, setRightAnswer] = useState([]);
+
+    /* toast to show right wrong message */
     const rightMessage = () => {
         toast.success('The Answer is Right !', {
-            position: toast.POSITION.TOP_RIGHT
+            position: toast.POSITION.TOP_RIGHT,
         });
     };
     const wrongMessage = () => {
         toast.error('Alas ! You choose a Wrong Answer.', {
-            position: toast.POSITION.TOP_RIGHT
+            position: toast.POSITION.TOP_RIGHT,           
         });
     };
 

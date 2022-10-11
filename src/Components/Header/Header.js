@@ -69,7 +69,7 @@ const Header = () => {
                             <li className="text-gray-600 hover:text-blue-600">
 
                                 <NavLink
-                                    to='/quizs'
+                                    to='/quizzes'
                                     aria-label='Quiz'
                                     title='Quiz'
                                     className={({ isActive }) =>

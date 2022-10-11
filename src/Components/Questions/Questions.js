@@ -10,31 +10,41 @@ const Questions = ({ question, handleButton }) => {
         setActive(show => !show)
     }
 
+    const [selected, setSelected] = useState('');
+    const handleChange = event => {
+        console.log(event.target.value);
+        setSelected(event.target.value);
+    };
 
     return (
         <div>
             <ToastContainer></ToastContainer>
             <section>
                 <div className='bg-slate-100 shadow-lg mx-auto lg:w-1/2 text-xl font-medium m-5 rounded-xl p-6'>
-                    <div className='flex justify-between'>
-                        <h1>Quiz : {question.question.slice(3, -4)} </h1>
+                    <div  className='flex justify-between'>
 
+                        <h1>Quiz  : {question.question.slice(3, -4)} </h1>
+
+
+                        {/* eye icon for correct answer */}
                         <FontAwesomeIcon onClick={handleToViewAns} className={active ? '' : 'hidden'} icon={faEye}>
                         </FontAwesomeIcon>
-
                         <FontAwesomeIcon onClick={handleToViewAns} className={active ? 'hidden' : ''} icon={faEyeSlash}>
                         </FontAwesomeIcon>
 
-                        {/* To show correct answer */}
                     </div>
                     {
                         question.options.map(option =>
-                            <div onClick={() => handleButton(option, question.correctAnswer)} className='cursor-pointer border border-emerald-300  text-center hover:text-emerald-600 p-2 my-4 rounded '>
-
+                            
+                            <div onClick={() => handleButton(option, question.correctAnswer)} className='cursor-pointer border border-emerald-300  hover:text-emerald-600 p-2 my-4 rounded flex justify-left items-center'>
+                                <label className='pr-8'>
+                                    <input value={option} onChange={handleChange}
+                                    type="radio"  /></label>
                                 {option}
                             </div>)
                     }
                 </div>
+                {/* to show correct answer */}
                 <div className={active ? '' : 'hidden'}>
                     <div className="alert bg-emerald-500 shadow-lg lg:w-1/2 mx-auto ">
                         <div>
