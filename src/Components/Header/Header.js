@@ -7,7 +7,7 @@ const Header = () => {
     };
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-xl w-10/12 mx-auto">
+            <div className="navbar bg-base-100 shadow-xl w-11/12 mx-auto">
                 <div className="flex-1">
                     <Link className="pl-2 text-2xl font-bold text-emerald-600" to='/'>Buzz Round</Link>
                 </div>
