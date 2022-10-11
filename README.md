@@ -2,7 +2,7 @@
 A simple educational route app using React-Router-DOM.
 
 # Live Link
-Netlify : 
+Netlify : [buzz-round](https://buzz-round.netlify.app/)
 
 # Code Link
 GitHub Code Link : [Code](https://github.com/programming-hero-web-course2/b6-quiz-crackerz-thesanchitadevi)

@@ -4,7 +4,6 @@ import './App.css';
 import Chart from './Components/Chart/Chart';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import FAQ from './Components/FAQ/FAQ';
-import Home from './Components/Home/Home';
 import QuizDetails from './Components/QuizDetails/QuizDetails';
 import Quizs from './Components/Quizs/Quizs';
 import Main from './Layout/Main';
