@@ -24,20 +24,19 @@ EyeIcon : [Fontawesome](https://fontawesome.com/)
 Chart : [recharts](https://recharts.org/en-US)
 
 
-# The steps I took to create my route app
-**
-1. Created react app
-**
-2. Downloaded react-router-dom and other components
-**
-3. Created components
-**
-4. Created Main layout folder 
+# The steps I took to create my react-route app
+* Created react app
 
-# What is in this react app
-**
-You can take a part in quiz. Also can check how many right answer you got.
-**
-A chart will show you how many quizzes have been offered.
-**
-There are certain fundamental react-router questions that have been answered.
+* Downloaded react-router-dom and other components
+
+* Created components
+
+* Created Main layout folder 
+
+# What is in this react-route app
+
+1. You can take a part in quiz. Also can check how many right answer you got.
+
+2. A chart will show you how many quizzes have been offered.
+
+3. There are certain fundamental react-router questions that have been answered.
