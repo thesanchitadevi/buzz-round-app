@@ -40,7 +40,7 @@ const QuizDetails = () => {
         <div >
             <div  >
                 <h1 className='text-center text-3xl text-emerald-600 font-bold py-5'>Quiz on {name}</h1>
-                <h2 className='text-center py-3 text-xl bg-emerald-600 text-white my-2 w-1/2 mx-auto rounded-xl'>Your got {rightAnswer.length} out of { questions.length}</h2>
+                <h2 className='text-center py-3 lg:text-xl sm:text-lg bg-emerald-600 text-white my-2 w-1/2 mx-auto rounded-xl'>Your got {rightAnswer.length} out of { questions.length}</h2>
             </div>
             {
                 questions.map(question => <Questions

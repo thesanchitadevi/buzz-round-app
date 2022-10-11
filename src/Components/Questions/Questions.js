@@ -11,12 +11,11 @@ const Questions = ({ question, handleButton }) => {
     }
 
 
-
     return (
         <div>
             <ToastContainer></ToastContainer>
             <section>
-                <div className='bg-slate-100 shadow-lg mx-auto  w-1/2 text-xl font-medium m-5 rounded-xl p-6'>
+                <div className='bg-slate-100 shadow-lg mx-auto lg:w-1/2 text-xl font-medium m-5 rounded-xl p-6'>
                     <div className='flex justify-between'>
                         <h1>Quiz : {question.question.slice(3, -4)} </h1>
 
@@ -37,10 +36,10 @@ const Questions = ({ question, handleButton }) => {
                     }
                 </div>
                 <div className={active ? '' : 'hidden'}>
-                    <div className="alert  bg-emerald-500 shadow-lg w-1/2 mx-auto">
+                    <div className="alert bg-emerald-500 shadow-lg lg:w-1/2 mx-auto ">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <span className='text-white font-medium text-lg'>Correct Answer :  {question.correctAnswer}</span>
+                            <span className='text-white font-medium lg:text-lg sm:text-xl'>Correct Answer :  {question.correctAnswer}</span>
                         </div>
                     </div>
                 </div>

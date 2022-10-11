@@ -4,20 +4,19 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 
 const Chart = () => {
     const quiz = useLoaderData();
-    console.log(quiz.data);
+    // console.log(quiz.data);
 
     return (
-        <div className='w-1/2 mx-auto mt-10'>
+        <div className='lg:mx-auto lg:w-1/2 mt-8 '>
             <div>
-                <ResponsiveContainer width='70%' height='80%'>
+                <ResponsiveContainer width='80%' height={400}>
                     <BarChart data={quiz.data}>
-                        <CartesianGrid strokeDasharray="3 3" />
+                        <CartesianGrid strokeDasharray="2 2" />
                         <XAxis dataKey="name" />
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="total" fill="#8884d8" />
-                        
+                        <Bar dataKey="total" fill="#82ca9d" />
                     </BarChart>
                 </ResponsiveContainer>
             </div>
