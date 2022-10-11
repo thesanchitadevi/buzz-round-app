@@ -3,9 +3,9 @@ import heroImg from '../../images/Header.jpg'
 
 const Home = () => {
     return (
-        <div className="hero my-8 mx-auto w-10/12" >
-            <img src={heroImg} alt="" />
-            <div className="hero-overlay bg-opacity-70"></div>
+        <div className="hero my-8 mx-auto w-10/12 " >
+            <img src={heroImg} className='w-full  rounded-lg' alt="" />
+            <div className="hero-overlay bg-opacity-70  rounded-lg"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-4xl font-bold">Welcome To Buzz Round</h1>

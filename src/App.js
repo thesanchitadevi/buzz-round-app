@@ -4,6 +4,7 @@ import './App.css';
 import Chart from './Components/Chart/Chart';
 import FAQ from './Components/FAQ/FAQ';
 import Home from './Components/Home/Home';
+import QuizDetails from './Components/QuizDetails/QuizDetails';
 import Quizs from './Components/Quizs/Quizs';
 import Main from './Layout/Main';
 
@@ -24,6 +25,13 @@ function App() {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Quizs></Quizs>
+        },
+        {
+          path: '/quiz/:quizId',
+          loader: async ({params}) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
+          element: <QuizDetails></QuizDetails>
         },
         {
           path: '/chart',
