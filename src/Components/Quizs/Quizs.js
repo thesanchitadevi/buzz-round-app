@@ -10,7 +10,7 @@ const Quizs = () => {
     return (
         <div>
             <Home></Home>
-            <div className='grid grid-cols-4 gap-2 w-10/12 mx-auto '>
+            <div className='grid lg:grid-cols-4 gap-2 w-10/12 mx-auto sm-grid-cols-1'>
                 {
                     quizTopic.map(quiz => <Quiz
                         key={quiz.id}

@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
+    let activeStyle = {
+        color: "grey"
+    };
     return (
         <div>
             <div className="navbar bg-base-100 shadow-xl w-10/12 mx-auto">
@@ -10,9 +13,15 @@ const Header = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="flex">
-                        <li className='px-2 text-xl font-semibold text-emerald-600'><Link to='/quizs'>Quiz</Link></li>
-                        <li className='px-2 text-xl font-semibold text-emerald-600'><Link to='/chart'>Chart</Link></li>
-                        <li className='px-2 text-xl font-semibold text-emerald-600'><Link to='/faq'>FAQ</Link></li>
+                        <li className='px-2 text-xl font-semibold text-emerald-600'><NavLink style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        } to='/quizs'>Quiz</NavLink></li>
+                        <li className='px-2 text-xl font-semibold text-emerald-600'><NavLink style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        } to='/chart'>Chart</NavLink></li>
+                        <li className='px-2 text-xl font-semibold text-emerald-600'><NavLink style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        } to='/faq'>FAQ</NavLink></li>
                     </ul>
                 </div>
             </div>
