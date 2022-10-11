@@ -1,10 +1,11 @@
 import React from 'react';
-import { useLoaderData, useResolvedPath } from 'react-router-dom';
+import { useLoaderData} from 'react-router-dom';
 import Home from '../Home/Home';
 import Quiz from '../Quiz/Quiz';
 
 const Quizs = () => {
     const quizs = useLoaderData();
+
     const quizTopic = quizs.data;
 
     return (

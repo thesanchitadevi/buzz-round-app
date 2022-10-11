@@ -5,8 +5,9 @@ import { toast } from 'react-toastify';
 
 const QuizDetails = () => {
     const quiz = useLoaderData();
-    const [rightAnswer, setRightAnswer] = useState([]);
     // console.log(quiz);
+
+    const [rightAnswer, setRightAnswer] = useState([]);
     const quizQues = quiz.data;
     const { name, questions } = quizQues;
     // console.log(questions);
